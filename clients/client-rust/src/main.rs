@@ -36,7 +36,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     for _ in 0..number_of_tests {
         let duration = perform_readings(&mut ctx, times).await?;
-        println!("Time for making {} readings: {} ms", times, duration.as_millis());
+        println!("{}", duration.as_millis());
         cumulative_duration += duration;
     }
 

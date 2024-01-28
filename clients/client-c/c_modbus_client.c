@@ -46,7 +46,7 @@ static void init_modbus_ctx(const char* ip, int port) {
 int main(int argc, char *argv[]) {
 
     if (5 > argc) {
-        fprintf(stderr, "Usage: %s <ip> <port> <times> <number_of_tests>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <ip> <port> <times> <number_of_tests> <mode>\n", argv[0]);
         exit(-1);
     }
 
@@ -68,7 +68,8 @@ int main(int argc, char *argv[]) {
     for (unsigned int i = 0; i < number_of_tests; i++) {
         current_time = read_registers();
         cumulative_time += current_time;
-        printf("Time for making %u, readings: %d ms\n", times, current_time); // Test for reading 10 registers 10000 times
+        if (strcmp(argv[5], "raw") == 0) 
+        printf("%d\n", current_time);
     }
 
     modbus_close(ctx);

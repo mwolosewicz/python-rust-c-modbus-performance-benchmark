@@ -37,8 +37,8 @@ AVARAGE = 0
 for _ in range(NUMBER_OF_TESTS):
     CURRENT_READING_TIME = read_holding_registers()
     AVARAGE += CURRENT_READING_TIME
-    print(f"Time for making {TIMES} readings: {CURRENT_READING_TIME*1000:.0f} ms")
-
+    print(f"{CURRENT_READING_TIME*1000:.0f}")
+    
 print(f"Average time for making {TIMES} readings: {(AVARAGE/NUMBER_OF_TESTS)*1000:.0f} ms")
 
 client.close()
