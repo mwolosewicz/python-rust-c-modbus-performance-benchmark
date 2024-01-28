@@ -26,6 +26,10 @@ The benchmarks focus on key performance metric:
 
 - **Response Time:** Measures the time required for read 10 registers from remote MODBUS TCP server.
 
+## Sample results
+![Benchmark of reading registres (server and client on the same machine](./sample_results/localhost/benchmark_comparison.png)
+![Benchmark of reading registers (server on remote machine connected with 1 Gbps ethernet)](./sample_results/ethernet_gbps/benchmark_comparison.png)
+
 ## Contributing
 Contributions to this benchmark suite are welcome. Whether it's adding new features, improving existing code, or reporting issues, your input is valuable.
 
